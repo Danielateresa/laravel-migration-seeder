@@ -5,9 +5,17 @@ img {
     aspect-ratio: 1/1;
 }
 
+.acquista {
+    height: fit-content;
+}
+
 .jumbo {
     background-image: url(https://www.ticonsiglio.com/wp-content/uploads/2021/09/trenitalia-treno.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    .col-6 {
+        background-color: rgba(0, 0, 0, 0.435);
+    }
 }
