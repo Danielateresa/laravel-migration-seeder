@@ -1,5 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
 
+nav {
+
+    .nav-link {
+        color: red;
+        font-weight: bold;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
 img {
     max-height: 200px;
     aspect-ratio: 1/1;

@@ -16,9 +16,10 @@
 </head>
 
 <body>
+    @include('partials.header')
 
     <main class="bg-light">
-        <h1 class="text-center py-4 bg-white">Prossimi treni in partenza</h1>
+        <h1 class="text-center py-4 bg-white m-0">Prossimi treni in partenza</h1>
 
         <div class="align-items-md-stretch">
             <div class="jumbo h-100 p-5 text-white">
