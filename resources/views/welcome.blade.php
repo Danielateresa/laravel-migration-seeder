@@ -18,9 +18,19 @@
 <body>
 
     <main class="bg-light">
-        <h1 class="text-center py-4 bg-white">Trains info</h1>
-        <div class="container pt-3">
+        <h1 class="text-center py-4 bg-white">Prossimi treni in partenza</h1>
 
+        <div class="align-items-md-stretch">
+            <div class="jumbo h-100 p-5 text-white">
+                <h2>Viaggia con noi</h2>
+                <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look.
+                    Then,
+                    mix and match with additional component themes and more.</p>
+                <button class="btn btn-danger" type="button">Example button</button>
+            </div>
+        </div>
+
+        <div class="container pt-3">
 
             @forelse($trains as $train)
             <div class="d-flex border-bottom pt-4">
