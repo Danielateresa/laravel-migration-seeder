@@ -1,1 +1,6 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+img {
+    max-height: 200px;
+    aspect-ratio: 1/1;
+}

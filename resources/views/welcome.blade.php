@@ -18,39 +18,38 @@
 <body>
 
     <main class="bg-light">
-        <h1>Trains info</h1>
-        <div class="container">
-            <div class="row g-4">
-                @forelse($trains as $train)
-                <div class="col-4">
-                    <div class="card p-2">
-                        <img src="https://assets.change.org/photos/4/ur/qz/PJurQzCeqciNvBO-800x800-noPad.jpg?1522795360"
-                            alt="">
-                        <div class="card-body">
-                            <h4><strong>Azienda: </strong>{{$train->azienda}}</h4>
-                            <h4><strong>Parte da: </strong>{{$train->stazione_di_partenza}}</h4>
-                            <h4><strong>Arrivo a: </strong>{{$train->stazione_di_arrivo}}</h4>
-                            <h4><strong>Ora partenza: </strong>{{$train->orario_di_partenza}}</h4>
-                            <h4><strong>Ora di arrivo: </strong>{{$train->orario_di_arrivo}}</h4>
-                            <h4><strong>Codice: </strong>{{$train->codice_treno}}</h4>
-                            <h4><strong>Numero carrozze: </strong>{{$train->numero_carrozze}}</h4>
-                            @if($train->in_orario == 1)
-                            <h4 class="text-success">Viaggia in orario</h4>
-                            @else
-                            <h4 class="text-danger">Previsto ritardo</h4>
-                            @endif
-                            @if($train->cancellato == 1)
-                            <h4 class="text-danger">Treno cancellato</h4>
-                            @else
-                            <h4 class="text-success">Partenza confermata</h4>
-                            @endif
-                        </div>
-                    </div>
+        <h1 class="text-center py-4 bg-white">Trains info</h1>
+        <div class="container pt-3">
+
+
+            @forelse($trains as $train)
+            <div class="d-flex border-bottom pt-4">
+                <img src="https://assets.change.org/photos/4/ur/qz/PJurQzCeqciNvBO-800x800-noPad.jpg?1522795360" alt="">
+
+                <div class="info ps-4 pb-4">
+                    <h6><strong>Azienda: </strong>{{$train->azienda}}</h6>
+                    <h6><strong>Parte da: </strong>{{$train->stazione_di_partenza}}</h6>
+                    <h6><strong>Arrivo a: </strong>{{$train->stazione_di_arrivo}}</h6>
+                    <h6><strong>Ora partenza: </strong>{{$train->orario_di_partenza}}</h6>
+                    <h6><strong>Ora di arrivo: </strong>{{$train->orario_di_arrivo}}</h6>
+                    <h6><strong>Codice: </strong>{{$train->codice_treno}}</h6>
+                    <h6><strong>Numero carrozze: </strong>{{$train->numero_carrozze}}</h6>
+                    @if($train->in_orario == 1)
+                    <h6 class="text-success">Viaggia in orario</h6>
+                    @else
+                    <h6 class="text-danger">Previsto ritardo</h6>
+                    @endif
+                    @if($train->cancellato == 1)
+                    <h6 class="text-danger">Treno cancellato</h6>
+                    @else
+                    <h6 class="text-success">Partenza confermata</h6>
+                    @endif
                 </div>
-                @empty
-                <h3>No trains to show now</h3>
-                @endforelse
             </div>
+            @empty
+            <h3>No trains to show now</h3>
+            @endforelse
+
         </div>
     </main>
 
