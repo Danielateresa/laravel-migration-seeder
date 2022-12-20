@@ -34,8 +34,16 @@
                             <h4><strong>Ora di arrivo: </strong>{{$train->orario_di_arrivo}}</h4>
                             <h4><strong>Codice: </strong>{{$train->codice_treno}}</h4>
                             <h4><strong>Numero carrozze: </strong>{{$train->numero_carrozze}}</h4>
-                            <h4><strong>In orario: </strong>{{$train->in_orario}}</h4>
-                            <h4><strong>Cancellato: </strong>{{$train->cancellato}}</h4>
+                            @if($train->in_orario == 1)
+                            <h4>Viaggia in orario</h4>
+                            @else
+                            <h4>Previsto ritardo</h4>
+                            @endif
+                            @if($train->cancellato == 1)
+                            <h4>Treno cancellato</h4>
+                            @else
+                            <h4>Partenza confermata</h4>
+                            @endif
                         </div>
                     </div>
                 </div>
